@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Android Spinner</string>
+    <string-array name="android_layout_arrays">
+        <item>Pilih Kota</item>
+        <item>Denpasar</item>
+        <item>Tabanan</item>
+        <item>Klungkung</item>
+        <item>Karangasem</item>
+        <item>Bleleng</item>
+        <item>Satu jalur</item>
+    </string-array>
+
 </resources>
