@@ -10,7 +10,7 @@
 
 
     <TextView
-        android:padding="10dp"
+        android:padding="40dp"
         android:id="@+id/view"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -28,5 +28,16 @@
         android:padding="5dp"
         >
     </Spinner>
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_gravity="center"
+        android:background="#a8a9a8"
+        android:layout_marginTop="100dp"
+        android:onClick="ButtonAction"
+        />
 
 </LinearLayout>
