@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidSpinner.iml" filepath="$PROJECT_DIR$/AndroidSpinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android-Spinner-Newbie.iml" filepath="$PROJECT_DIR$/Android-Spinner-Newbie.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -16,26 +16,45 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         spinner_new = (Spinner) findViewById(R.id.spinner);
-        spinner_new.setOnItemSelectedListener(new CustomOnItemSelectedListener());
-    }
+        spinner_new.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-    public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
+                String text = spinner_new.getSelectedItem().toString();
 
-        String firstItem = String.valueOf(spinner_new.getSelectedItem());
+                Toast.makeText(getApplicationContext(),"Kamu memilih : " + text,Toast.LENGTH_LONG).show();
 
-        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-            if (firstItem.equals(String.valueOf(spinner_new.getSelectedItem()))) {
-                //memilih salah satu
-            } else {
-                Toast.makeText(parent.getContext(),
-                        "Kamu memilih : " + parent.getItemAtPosition(pos).toString(),
-                        Toast.LENGTH_LONG).show();
             }
-        }
 
-        @Override
-        public void onNothingSelected(AdapterView<?> arg) {
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
-        }
+            }
+        });
     }
+
+    /*
+    *
+    * ga perlu buat class lagi boy
+    * */
+
+//    public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
+//
+//        String firstItem = spinner_new.getSelectedItem().toString();
+//
+//        public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+//            if (firstItem.equals(String.valueOf(spinner_new.getSelectedItem()))) {
+//                //memilih salah satu
+//            } else {
+//                Toast.makeText(parent.getContext(),
+//                        "Kamu memilih : " + parent.getItemAtPosition(pos).toString(),
+//                        Toast.LENGTH_LONG).show();
+//            }
+//        }
+//
+//        @Override
+//        public void onNothingSelected(AdapterView<?> arg) {
+//
+//        }
+//    }
 }
