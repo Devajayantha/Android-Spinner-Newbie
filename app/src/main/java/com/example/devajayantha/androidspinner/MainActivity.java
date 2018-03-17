@@ -7,13 +7,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Spinner spinner_new;
-    private Button button_new;
+    Spinner spinner_new;
+    Button button_new;
+    EditText nama_new;
     private Intent intent;
     private Object android;
 
@@ -23,17 +25,42 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         spinner_new = (Spinner) findViewById(R.id.spinner);
-        button_new = (Button) findViewById(R.id.Button);
+        button_new = (Button) findViewById(R.id.button);
+        nama_new = (EditText) findViewById(R.id.nama);
+       // button_new.setOnClickListener(this);
 
+
+    }
+    public void SendMessage(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("txt",nama_new.getText().toString());
+        intent.putExtra("spn",spinner_new.getSelectedItem().toString());
+        //String txt = nama_new.getText().toString();
+        //String spn = spinner_new.getSelectedItem().toString();
+        startActivity(intent);
+    }
+
+}
+/*
 
         button_new.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
-                intent.putExtra("data",String.valueOf(spinner_new.getSelectedItem()));
+                Intent intent = new Intent(this,SecondActivity.class);
+                String txt = nama_new.getText().toString();
+                String spn = spinner_new.getSelectedItem().toString();
                 startActivity(intent);
+                //Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                //intent.putExtra("data",String.valueOf(spinner_new.getSelectedItem()));
+                //startActivity(intent);
+                //String text2 = nama_new.getText().toString();
+                //String text = spinner_new.getSelectedItem().toString();
+                //Toast.makeText(getApplicationContext(),text2+ " Kamu memilih Kota " + text , Toast.LENGTH_LONG).show();
+
             }
         });
+    }*/
+        /*
         spinner_new.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -45,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    */
     /*
     *
     * ga perlu buat class lagi boy
@@ -70,4 +97,4 @@ public class MainActivity extends AppCompatActivity {
 //
 //        }
 //    }
-}
+
