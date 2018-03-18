@@ -5,11 +5,30 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
+android:paddingTop="50dp"
+android:background="#dfedf7"
 tools:context="com.example.devajayantha.androidspinner.SecondActivity">
-
 
     <TextView
         android:id="@+id/TxView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/TxView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:id="@+id/TxView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

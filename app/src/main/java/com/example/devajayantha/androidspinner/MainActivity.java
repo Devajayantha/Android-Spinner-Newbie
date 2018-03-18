@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinner_new;
     Button button_new;
     EditText nama_new;
-    private Intent intent;
-    private Object android;
+    EditText nim_new;
+    EditText alamat_new;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         spinner_new = (Spinner) findViewById(R.id.spinner);
         button_new = (Button) findViewById(R.id.button);
         nama_new = (EditText) findViewById(R.id.nama);
+        nim_new =(EditText) findViewById(R.id.nim);
+        alamat_new = (EditText) findViewById(R.id.alamat);
+
        // button_new.setOnClickListener(this);
 
 
@@ -34,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     public void SendMessage(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra("txt",nama_new.getText().toString());
+        intent.putExtra("nim",nim_new.getText().toString());
+        intent.putExtra("almt",alamat_new.getText().toString());
         intent.putExtra("spn",spinner_new.getSelectedItem().toString());
         //String txt = nama_new.getText().toString();
         //String spn = spinner_new.getSelectedItem().toString();

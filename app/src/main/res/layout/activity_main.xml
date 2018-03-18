@@ -2,27 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#dfedf7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp"
+    android:paddingTop="40dp"
+
     tools:context="com.example.devajayantha.androidspinner.MainActivity"
     >
-    <TextView
-        android:padding="40dp"
-        android:id="@+id/view"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Contoh Spinner Android"
-        android:textSize="20sp" />
+
 
     <TextView
-        android:layout_width="match_parent"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Nama"
+        android:padding="5dp"
+        android:text="Nama Lengkap"
         android:textSize="15sp"
+        android:fontFamily="sans-serif"
         />
     <EditText
         android:id="@+id/nama"
@@ -30,14 +29,47 @@
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="NIM"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"
+        />
+    <EditText
+        android:id="@+id/nim"
+        android:hint="Input NIM anda"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Alamat"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif"
+        />
+    <EditText
+        android:id="@+id/alamat"
+        android:hint="Input alamat anda"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="Kota"
+        android:text="Jurusan"
         android:textSize="15sp"
+        android:fontFamily="sans-serif"
         />
     <Spinner
         android:id="@+id/spinner"
@@ -50,12 +82,13 @@
     </Spinner>
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Submit"
         android:layout_gravity="center"
-        android:background="#a8a9a8"
-        android:layout_marginTop="100dp"
+        android:background="#0e609b"
+        android:layout_marginTop="20dp"
         android:onClick="SendMessage"
+        android:textColor="#fff"
         />
 </LinearLayout>

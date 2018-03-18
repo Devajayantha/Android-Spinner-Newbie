@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">Android Spinner</string>
     <string-array name="android_layout_arrays">
-        <item>Pilih Kota</item>
-        <item>Denpasar</item>
-        <item>Tabanan</item>
-        <item>Klungkung</item>
-        <item>Karangasem</item>
-        <item>Bleleng</item>
-        <item>Singaraja</item>
+        <item>Teknik Sipil</item>
+        <item>Teknik Elektro</item>
+        <item>Teknik Mesin</item>
+        <item>Teknologi Informasi</item>
+        <item>Teknik Arsitektur</item>
+        <item>Teknik Nuklir</item>
     </string-array>
 </resources>
